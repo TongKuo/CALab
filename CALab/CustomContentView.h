@@ -10,6 +10,4 @@
 
 @interface CustomContentView : NSView
 
-- ( IBAction ) updateAction: ( id )_Sender;
-
 @end
