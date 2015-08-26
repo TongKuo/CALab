@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832E352A1B8DE2B400DCABE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E35291B8DE2B400DCABE3 /* QuartzCore.framework */; };
 		837B976D1B8D7D6800BDDCF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B976C1B8D7D6800BDDCF0 /* AppDelegate.m */; };
 		837B97701B8D7D6800BDDCF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B976F1B8D7D6800BDDCF0 /* main.m */; };
 		837B97721B8D7D6800BDDCF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 837B97711B8D7D6800BDDCF0 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		832E35291B8DE2B400DCABE3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		837B97681B8D7D6800BDDCF0 /* CALab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CALab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		837B976B1B8D7D6800BDDCF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		837B976C1B8D7D6800BDDCF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832E352A1B8DE2B400DCABE3 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 		837B975F1B8D7D6800BDDCF0 = {
 			isa = PBXGroup;
 			children = (
+				832E35291B8DE2B400DCABE3 /* QuartzCore.framework */,
 				837B976A1B8D7D6800BDDCF0 /* CALab */,
 				837B977E1B8D7D6800BDDCF0 /* CALabTests */,
 				837B97891B8D7D6800BDDCF0 /* CALabUITests */,
@@ -489,6 +493,7 @@
 				837B97911B8D7D6800BDDCF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		837B97921B8D7D6800BDDCF0 /* Build configuration list for PBXNativeTarget "CALabTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +502,7 @@
 				837B97941B8D7D6800BDDCF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		837B97951B8D7D6800BDDCF0 /* Build configuration list for PBXNativeTarget "CALabUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +511,7 @@
 				837B97971B8D7D6800BDDCF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
