@@ -671,9 +671,21 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="823" height="590"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
-            <view key="contentView" alphaValue="0.40000000000000002" id="EiT-Mj-1SZ" customClass="CustomContentView">
+            <view key="contentView" id="EiT-Mj-1SZ" customClass="CustomContentView">
                 <rect key="frame" x="0.0" y="0.0" width="823" height="590"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-of-l3R">
+                        <rect key="frame" x="14" y="522" width="184" height="32"/>
+                        <buttonCell key="cell" type="push" title="Stop Explicit Animation" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wdz-bJ-thc">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="stopExplicitAnimAction:" target="EiT-Mj-1SZ" id="uzl-UA-Ex2"/>
+                        </connections>
+                    </button>
+                </subviews>
                 <animations/>
             </view>
             <point key="canvasLocation" x="6.5" y="-62"/>

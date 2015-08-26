@@ -11,6 +11,12 @@
 
 @implementation CustomContentView
 
+- ( IBAction ) stopExplicitAnimAction: ( id )_Sender
+    {
+    for ( CALayer* _Layer in self.layer.sublayers )
+        [ _Layer removeAnimationForKey: @"animations" ];
+    }
+
 - ( void ) awakeFromNib
     {
     [ self setWantsLayer: YES ];
@@ -83,7 +89,16 @@
                          , 566.f, 74.f
                          );
 
+//    CGContextRef cgCurrentContext = [ NSGraphicsContext currentContext ].graphicsPort;
+//    CGContextSetStrokeColorWithColor( cgCurrentContext, [ NSColor redColor ].CGColor );
+//    CGContextSetLineWidth( cgCurrentContext, 5.f );
+//    CGContextAddPath( cgCurrentContext, cgPath );
+//    CGContextDrawPath( cgCurrentContext, kCGPathStroke );
+
     keyframeAnim.path = cgPath;
+    [ keyframeAnim setKeyTimes: @[ @( 0.1 ), @( 0.3 ), @( 0.4 ), @( 0.5 ), @( 1.0 ) ] ];
+
+    CFRelease( cgPath );
 #endif
     [ keyframeAnim setDuration: 6.f ];
 
@@ -94,8 +109,12 @@
     [ gradientAnim setToValue: newColor ];
     [ gradientAnim setDuration: 6.f ];
 
-    [ sublayer addAnimation: keyframeAnim forKey: @"position" ];
-    [ sublayer addAnimation: gradientAnim forKey: @"backgroundColor" ];
+    CAAnimationGroup* animationGroup = [ CAAnimationGroup animation ];
+    [ animationGroup setAnimations: @[ keyframeAnim, gradientAnim ] ];
+    [ animationGroup setDuration: 6.f ];
+    [ sublayer addAnimation: animationGroup forKey: @"animations" ];
+//    [ sublayer addAnimation: keyframeAnim forKey: @"position" ];
+//    [ sublayer addAnimation: gradientAnim forKey: @"backgroundColor" ];
 
     [ sublayer setPosition: CGPointMake( 566.f, 74.f ) ];
     [ sublayer setBackgroundColor: newColor.CGColor ];
