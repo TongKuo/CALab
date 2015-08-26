@@ -23,36 +23,57 @@
     [ sublayer setDelegate: self ];
     [ self.layer addSublayer: sublayer ];
 
-    [ NSTimer scheduledTimerWithTimeInterval: 1.f
-                                      target: self
-                                    selector: @selector( _timerFireMethod: )
-                                    userInfo: @{ @"sublayer" : sublayer }
-                                     repeats: NO ];
+    self->_timer = [ NSTimer timerWithTimeInterval: 6.f
+                                            target: self
+                                          selector: @selector( _timerFireMethod: )
+                                          userInfo: @{ @"sublayer" : sublayer }
+                                           repeats: YES ];
+
+    [ self->_timer fire ];
+    [ [ NSRunLoop currentRunLoop ] addTimer: self->_timer forMode: NSDefaultRunLoopMode ];
     }
 
 - ( void ) _timerFireMethod: ( NSTimer* )_Timer
     {
     CALayer* sublayer = _Timer.userInfo[ @"sublayer" ];
 
-    CABasicAnimation* positionAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
-//    CGPoint oldPosition = CGPointMake( sublayer.position.x, sublayer.position.y );
-//    CGPoint newPosition = CGPointMake( sublayer.position.x + 300, sublayer.position.y );
-//    [ positionAnim setFromValue: [ NSValue valueWithBytes: &oldPosition objCType: @encode( CGPoint ) ] ];
-//    [ positionAnim setFromValue: [ NSValue valueWithBytes: &newPosition objCType: @encode( CGPoint ) ] ];
-//    [ positionAnim setFromValue: [ NSColor whiteColor ] ];
-//    [ positionAnim setToValue: [ NSColor blackColor ] ];
-    [ positionAnim setDuration: 4.f ];
-    [ sublayer addAnimation: positionAnim forKey: @"position" ];
+//    CABasicAnimation* positionAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
+////    CGPoint oldPosition = CGPointMake( sublayer.position.x, sublayer.position.y );
+////    CGPoint newPosition = CGPointMake( sublayer.position.x + 300, sublayer.position.y );
+////    [ positionAnim setFromValue: [ NSValue valueWithBytes: &oldPosition objCType: @encode( CGPoint ) ] ];
+////    [ positionAnim setFromValue: [ NSValue valueWithBytes: &newPosition objCType: @encode( CGPoint ) ] ];
+////    [ positionAnim setFromValue: [ NSColor whiteColor ] ];
+////    [ positionAnim setToValue: [ NSColor blackColor ] ];
+//    [ positionAnim setDuration: 4.f ];
+//    [ sublayer addAnimation: positionAnim forKey: @"position" ];
+
+    CAKeyframeAnimation* keyframeAnim = [ CAKeyframeAnimation animationWithKeyPath: @"position" ];
+    CGFloat sublayerHeight = NSHeight( sublayer.bounds );
+    CGFloat sublayerWidth = NSWidth( sublayer.bounds );
+    CGPoint pos0 = CGPointMake( NSMinX( self.bounds ), NSMinY( self.bounds ) );
+    CGPoint pos1 = CGPointMake( NSMinX( self.bounds ), NSMaxY( self.bounds ) - sublayerHeight );
+    CGPoint pos2 = CGPointMake( NSMaxX( self.bounds ) - sublayerWidth, NSMaxY( self.bounds ) - sublayerHeight );
+    CGPoint pos3 = CGPointMake( NSMaxX( self.bounds ) - sublayerWidth, NSMinY( self.bounds ) );
+    [ keyframeAnim setValues: @[ [ NSValue valueWithBytes: &pos0 objCType: @encode( CGPoint ) ]
+                               , [ NSValue valueWithBytes: &pos1 objCType: @encode( CGPoint ) ]
+                               , [ NSValue valueWithBytes: &pos2 objCType: @encode( CGPoint ) ]
+                               , [ NSValue valueWithBytes: &pos3 objCType: @encode( CGPoint ) ]
+                               , [ NSValue valueWithBytes: &pos0 objCType: @encode( CGPoint ) ]
+                               ] ];
+
+    [ keyframeAnim setDuration: 6.f ];
 
     CABasicAnimation* gradientAnim = [ CABasicAnimation animationWithKeyPath: @"backgroundColor" ];
     NSColor* oldColor = [ NSColor orangeColor ];
     NSColor* newColor = [ NSColor greenColor ];
     [ gradientAnim setFromValue: oldColor ];
     [ gradientAnim setToValue: newColor ];
-    [ gradientAnim setDuration: 4.f ];
+    [ gradientAnim setDuration: 6.f ];
+
+    [ sublayer addAnimation: keyframeAnim forKey: @"position" ];
     [ sublayer addAnimation: gradientAnim forKey: @"backgroundColor" ];
 
-    [ sublayer setPosition: CGPointMake( sublayer.position.x + 300, sublayer.position.y + 300 ) ];
+//    [ sublayer setPosition: CGPointMake( sublayer.position.x + 300, sublayer.position.y + 300 ) ];
     [ sublayer setBackgroundColor: newColor.CGColor ];
     }
 

@@ -9,5 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface CustomContentView : NSView
+    {
+@protected
+    NSTimer __strong* _timer;
+    }
 
 @end
