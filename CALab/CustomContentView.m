@@ -6,6 +6,7 @@
 //  Copyright © 2015 Tong Kuo. All rights reserved.
 //
 
+@import QuartzCore;
 #import "CustomContentView.h"
 
 @implementation CustomContentView
@@ -13,28 +14,46 @@
 - ( void ) awakeFromNib
     {
     [ self setWantsLayer: YES ];
+
+    CALayer* sublayer = [ CALayer layer ];
+    [ sublayer setBounds: NSMakeRect( 80, 80, 50, 60 ) ];
+    [ sublayer setAnchorPoint: NSMakePoint( 0, 0 ) ];
+    [ sublayer setBackgroundColor: [ NSColor orangeColor ].CGColor ];
+
+    [ sublayer setDelegate: self ];
+    [ self.layer addSublayer: sublayer ];
+
+    [ NSTimer scheduledTimerWithTimeInterval: 1.f
+                                      target: self
+                                    selector: @selector( _timerFireMethod: )
+                                    userInfo: @{ @"sublayer" : sublayer }
+                                     repeats: NO ];
     }
 
-- ( void ) updateLayer
+- ( void ) _timerFireMethod: ( NSTimer* )_Timer
     {
-    NSLog( @"%s", __PRETTY_FUNCTION__ );
-    [ super updateLayer ];
-    }
+    CALayer* sublayer = _Timer.userInfo[ @"sublayer" ];
 
-- ( void ) drawRect: ( NSRect )_DirtyRect
-    {
-    NSLog( @"%s", __PRETTY_FUNCTION__ );
-    }
+    CABasicAnimation* positionAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
+//    CGPoint oldPosition = CGPointMake( sublayer.position.x, sublayer.position.y );
+//    CGPoint newPosition = CGPointMake( sublayer.position.x + 300, sublayer.position.y );
+//    [ positionAnim setFromValue: [ NSValue valueWithBytes: &oldPosition objCType: @encode( CGPoint ) ] ];
+//    [ positionAnim setFromValue: [ NSValue valueWithBytes: &newPosition objCType: @encode( CGPoint ) ] ];
+//    [ positionAnim setFromValue: [ NSColor whiteColor ] ];
+//    [ positionAnim setToValue: [ NSColor blackColor ] ];
+    [ positionAnim setDuration: 4.f ];
+    [ sublayer addAnimation: positionAnim forKey: @"position" ];
 
-- ( void ) displayLayer: ( nonnull CALayer* )_Layer
-    {
-    NSImage* image = [ [ NSImage alloc ] initWithData: [ NSData dataWithContentsOfFile: @"/Users/EsquireTongG/Desktop/Okanogan_Complex_Fire_-_USFS.jpg" ] ];
-    [ _Layer setContents: image ];
-    }
+    CABasicAnimation* gradientAnim = [ CABasicAnimation animationWithKeyPath: @"backgroundColor" ];
+    NSColor* oldColor = [ NSColor orangeColor ];
+    NSColor* newColor = [ NSColor greenColor ];
+    [ gradientAnim setFromValue: oldColor ];
+    [ gradientAnim setToValue: newColor ];
+    [ gradientAnim setDuration: 4.f ];
+    [ sublayer addAnimation: gradientAnim forKey: @"backgroundColor" ];
 
-- ( IBAction ) updateAction: ( id )_Sender
-    {
-    [ self setNeedsDisplay: YES ];
+    [ sublayer setPosition: CGPointMake( sublayer.position.x + 300, sublayer.position.y + 300 ) ];
+    [ sublayer setBackgroundColor: newColor.CGColor ];
     }
 
 @end
