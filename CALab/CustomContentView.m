@@ -19,17 +19,18 @@
     [ sublayer setBounds: NSMakeRect( 80, 80, 50, 60 ) ];
     [ sublayer setAnchorPoint: NSMakePoint( 0, 0 ) ];
     [ sublayer setBackgroundColor: [ NSColor orangeColor ].CGColor ];
+    [ sublayer setPosition: CGPointMake( 74.f, 74.f ) ];
 
     [ sublayer setDelegate: self ];
     [ self.layer addSublayer: sublayer ];
 
-    self->_timer = [ NSTimer timerWithTimeInterval: 6.f
+    self->_timer = [ NSTimer timerWithTimeInterval: 1.f
                                             target: self
                                           selector: @selector( _timerFireMethod: )
                                           userInfo: @{ @"sublayer" : sublayer }
-                                           repeats: YES ];
+                                           repeats: NO ];
 
-    [ self->_timer fire ];
+//    [ self->_timer fire ];
     [ [ NSRunLoop currentRunLoop ] addTimer: self->_timer forMode: NSDefaultRunLoopMode ];
     }
 
@@ -48,6 +49,7 @@
 //    [ sublayer addAnimation: positionAnim forKey: @"position" ];
 
     CAKeyframeAnimation* keyframeAnim = [ CAKeyframeAnimation animationWithKeyPath: @"position" ];
+#if 0 // Set up keyframe animation by specifying the values/keyTimes
     CGFloat sublayerHeight = NSHeight( sublayer.bounds );
     CGFloat sublayerWidth = NSWidth( sublayer.bounds );
     CGPoint pos0 = CGPointMake( NSMinX( self.bounds ), NSMinY( self.bounds ) );
@@ -61,6 +63,28 @@
                                , [ NSValue valueWithBytes: &pos0 objCType: @encode( CGPoint ) ]
                                ] ];
 
+    [ keyframeAnim setKeyTimes: @[ @( 0.1 ), @( 0.3 ), @( 0.4 ), @( 0.5 ), @( 1.0 ) ] ];
+
+#endif
+
+#if 1 // Set up keyframe animation by specifying the bezier path
+    CGMutablePathRef cgPath = CGPathCreateMutable();
+    CGPathMoveToPoint( cgPath, NULL, 74.f, 74.f );
+
+    CGPathAddCurveToPoint( cgPath, NULL
+                         , 74.f, 500.f
+                         , 320.f, 500.f
+                         , 320.f, 74.f
+                         );
+
+    CGPathAddCurveToPoint( cgPath, NULL
+                         , 320.f, 500.f
+                         , 566.f, 500.f
+                         , 566.f, 74.f
+                         );
+
+    keyframeAnim.path = cgPath;
+#endif
     [ keyframeAnim setDuration: 6.f ];
 
     CABasicAnimation* gradientAnim = [ CABasicAnimation animationWithKeyPath: @"backgroundColor" ];
@@ -73,7 +97,7 @@
     [ sublayer addAnimation: keyframeAnim forKey: @"position" ];
     [ sublayer addAnimation: gradientAnim forKey: @"backgroundColor" ];
 
-//    [ sublayer setPosition: CGPointMake( sublayer.position.x + 300, sublayer.position.y + 300 ) ];
+    [ sublayer setPosition: CGPointMake( 566.f, 74.f ) ];
     [ sublayer setBackgroundColor: newColor.CGColor ];
     }
 
