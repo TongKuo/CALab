@@ -12,30 +12,29 @@
 
 - ( void ) awakeFromNib
     {
-//    NSLog( @"%d", self.wantsUpdateLayer );
     [ self setWantsLayer: YES ];
-
-    CALayer* hostingLayer = [ CALayer layer ];
-    hostingLayer.backgroundColor = [ NSColor purpleColor ].CGColor;
-    [ self setLayer: hostingLayer ];
-    }
-
-//- ( void ) drawRect: ( NSRect )_DirtyRect
-//    {
-//    [ super drawRect: _DirtyRect ];
-//    }
-
-- ( void ) drawLayer: ( nonnull CALayer* )_Layer
-           inContext: ( nonnull CGContextRef )_Ctx
-    {
-    NSLog( @"%s", __PRETTY_FUNCTION__ );
     }
 
 - ( void ) updateLayer
     {
     NSLog( @"%s", __PRETTY_FUNCTION__ );
     [ super updateLayer ];
-    self.layer.backgroundColor = [ NSColor orangeColor ].CGColor;
+    }
+
+- ( void ) drawRect: ( NSRect )_DirtyRect
+    {
+    NSLog( @"%s", __PRETTY_FUNCTION__ );
+    }
+
+- ( void ) displayLayer: ( nonnull CALayer* )_Layer
+    {
+    NSImage* image = [ [ NSImage alloc ] initWithData: [ NSData dataWithContentsOfFile: @"/Users/EsquireTongG/Desktop/Okanogan_Complex_Fire_-_USFS.jpg" ] ];
+    [ _Layer setContents: image ];
+    }
+
+- ( IBAction ) updateAction: ( id )_Sender
+    {
+    [ self setNeedsDisplay: YES ];
     }
 
 @end
