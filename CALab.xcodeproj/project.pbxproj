@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		837B976D1B8D7D6800BDDCF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B976C1B8D7D6800BDDCF0 /* AppDelegate.m */; };
+		837B97701B8D7D6800BDDCF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B976F1B8D7D6800BDDCF0 /* main.m */; };
+		837B97721B8D7D6800BDDCF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 837B97711B8D7D6800BDDCF0 /* Assets.xcassets */; };
+		837B97751B8D7D6800BDDCF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837B97731B8D7D6800BDDCF0 /* MainMenu.xib */; };
+		837B97801B8D7D6800BDDCF0 /* CALabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B977F1B8D7D6800BDDCF0 /* CALabTests.m */; };
+		837B978B1B8D7D6800BDDCF0 /* CALabUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B978A1B8D7D6800BDDCF0 /* CALabUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		837B977C1B8D7D6800BDDCF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 837B97601B8D7D6800BDDCF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 837B97671B8D7D6800BDDCF0;
+			remoteInfo = CALab;
+		};
+		837B97871B8D7D6800BDDCF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 837B97601B8D7D6800BDDCF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 837B97671B8D7D6800BDDCF0;
+			remoteInfo = CALab;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		837B97681B8D7D6800BDDCF0 /* CALab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CALab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		837B976B1B8D7D6800BDDCF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		837B976C1B8D7D6800BDDCF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		837B976F1B8D7D6800BDDCF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		837B97711B8D7D6800BDDCF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		837B97741B8D7D6800BDDCF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		837B97761B8D7D6800BDDCF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		837B977B1B8D7D6800BDDCF0 /* CALabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CALabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		837B977F1B8D7D6800BDDCF0 /* CALabTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALabTests.m; sourceTree = "<group>"; };
+		837B97811B8D7D6800BDDCF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		837B97861B8D7D6800BDDCF0 /* CALabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CALabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		837B978A1B8D7D6800BDDCF0 /* CALabUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALabUITests.m; sourceTree = "<group>"; };
+		837B978C1B8D7D6800BDDCF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		837B97651B8D7D6800BDDCF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837B97781B8D7D6800BDDCF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837B97831B8D7D6800BDDCF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		837B975F1B8D7D6800BDDCF0 = {
+			isa = PBXGroup;
+			children = (
+				837B976A1B8D7D6800BDDCF0 /* CALab */,
+				837B977E1B8D7D6800BDDCF0 /* CALabTests */,
+				837B97891B8D7D6800BDDCF0 /* CALabUITests */,
+				837B97691B8D7D6800BDDCF0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		837B97691B8D7D6800BDDCF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				837B97681B8D7D6800BDDCF0 /* CALab.app */,
+				837B977B1B8D7D6800BDDCF0 /* CALabTests.xctest */,
+				837B97861B8D7D6800BDDCF0 /* CALabUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		837B976A1B8D7D6800BDDCF0 /* CALab */ = {
+			isa = PBXGroup;
+			children = (
+				837B976B1B8D7D6800BDDCF0 /* AppDelegate.h */,
+				837B976C1B8D7D6800BDDCF0 /* AppDelegate.m */,
+				837B97711B8D7D6800BDDCF0 /* Assets.xcassets */,
+				837B97731B8D7D6800BDDCF0 /* MainMenu.xib */,
+				837B97761B8D7D6800BDDCF0 /* Info.plist */,
+				837B976E1B8D7D6800BDDCF0 /* Supporting Files */,
+			);
+			path = CALab;
+			sourceTree = "<group>";
+		};
+		837B976E1B8D7D6800BDDCF0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				837B976F1B8D7D6800BDDCF0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		837B977E1B8D7D6800BDDCF0 /* CALabTests */ = {
+			isa = PBXGroup;
+			children = (
+				837B977F1B8D7D6800BDDCF0 /* CALabTests.m */,
+				837B97811B8D7D6800BDDCF0 /* Info.plist */,
+			);
+			path = CALabTests;
+			sourceTree = "<group>";
+		};
+		837B97891B8D7D6800BDDCF0 /* CALabUITests */ = {
+			isa = PBXGroup;
+			children = (
+				837B978A1B8D7D6800BDDCF0 /* CALabUITests.m */,
+				837B978C1B8D7D6800BDDCF0 /* Info.plist */,
+			);
+			path = CALabUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		837B97671B8D7D6800BDDCF0 /* CALab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 837B978F1B8D7D6800BDDCF0 /* Build configuration list for PBXNativeTarget "CALab" */;
+			buildPhases = (
+				837B97641B8D7D6800BDDCF0 /* Sources */,
+				837B97651B8D7D6800BDDCF0 /* Frameworks */,
+				837B97661B8D7D6800BDDCF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CALab;
+			productName = CALab;
+			productReference = 837B97681B8D7D6800BDDCF0 /* CALab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		837B977A1B8D7D6800BDDCF0 /* CALabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 837B97921B8D7D6800BDDCF0 /* Build configuration list for PBXNativeTarget "CALabTests" */;
+			buildPhases = (
+				837B97771B8D7D6800BDDCF0 /* Sources */,
+				837B97781B8D7D6800BDDCF0 /* Frameworks */,
+				837B97791B8D7D6800BDDCF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				837B977D1B8D7D6800BDDCF0 /* PBXTargetDependency */,
+			);
+			name = CALabTests;
+			productName = CALabTests;
+			productReference = 837B977B1B8D7D6800BDDCF0 /* CALabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		837B97851B8D7D6800BDDCF0 /* CALabUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 837B97951B8D7D6800BDDCF0 /* Build configuration list for PBXNativeTarget "CALabUITests" */;
+			buildPhases = (
+				837B97821B8D7D6800BDDCF0 /* Sources */,
+				837B97831B8D7D6800BDDCF0 /* Frameworks */,
+				837B97841B8D7D6800BDDCF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				837B97881B8D7D6800BDDCF0 /* PBXTargetDependency */,
+			);
+			name = CALabUITests;
+			productName = CALabUITests;
+			productReference = 837B97861B8D7D6800BDDCF0 /* CALabUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		837B97601B8D7D6800BDDCF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Tong Kuo";
+				TargetAttributes = {
+					837B97671B8D7D6800BDDCF0 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					837B977A1B8D7D6800BDDCF0 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 837B97671B8D7D6800BDDCF0;
+					};
+					837B97851B8D7D6800BDDCF0 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 837B97671B8D7D6800BDDCF0;
+					};
+				};
+			};
+			buildConfigurationList = 837B97631B8D7D6800BDDCF0 /* Build configuration list for PBXProject "CALab" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 837B975F1B8D7D6800BDDCF0;
+			productRefGroup = 837B97691B8D7D6800BDDCF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				837B97671B8D7D6800BDDCF0 /* CALab */,
+				837B977A1B8D7D6800BDDCF0 /* CALabTests */,
+				837B97851B8D7D6800BDDCF0 /* CALabUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		837B97661B8D7D6800BDDCF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837B97721B8D7D6800BDDCF0 /* Assets.xcassets in Resources */,
+				837B97751B8D7D6800BDDCF0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837B97791B8D7D6800BDDCF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837B97841B8D7D6800BDDCF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		837B97641B8D7D6800BDDCF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837B97701B8D7D6800BDDCF0 /* main.m in Sources */,
+				837B976D1B8D7D6800BDDCF0 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837B97771B8D7D6800BDDCF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837B97801B8D7D6800BDDCF0 /* CALabTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837B97821B8D7D6800BDDCF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837B978B1B8D7D6800BDDCF0 /* CALabUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		837B977D1B8D7D6800BDDCF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 837B97671B8D7D6800BDDCF0 /* CALab */;
+			targetProxy = 837B977C1B8D7D6800BDDCF0 /* PBXContainerItemProxy */;
+		};
+		837B97881B8D7D6800BDDCF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 837B97671B8D7D6800BDDCF0 /* CALab */;
+			targetProxy = 837B97871B8D7D6800BDDCF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		837B97731B8D7D6800BDDCF0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				837B97741B8D7D6800BDDCF0 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		837B978D1B8D7D6800BDDCF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		837B978E1B8D7D6800BDDCF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		837B97901B8D7D6800BDDCF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CALab/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CALab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		837B97911B8D7D6800BDDCF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CALab/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CALab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		837B97931B8D7D6800BDDCF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CALabTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CALabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CALab.app/Contents/MacOS/CALab";
+			};
+			name = Debug;
+		};
+		837B97941B8D7D6800BDDCF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CALabTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CALabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CALab.app/Contents/MacOS/CALab";
+			};
+			name = Release;
+		};
+		837B97961B8D7D6800BDDCF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CALabUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CALabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CALab;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		837B97971B8D7D6800BDDCF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CALabUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CALabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CALab;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		837B97631B8D7D6800BDDCF0 /* Build configuration list for PBXProject "CALab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837B978D1B8D7D6800BDDCF0 /* Debug */,
+				837B978E1B8D7D6800BDDCF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		837B978F1B8D7D6800BDDCF0 /* Build configuration list for PBXNativeTarget "CALab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837B97901B8D7D6800BDDCF0 /* Debug */,
+				837B97911B8D7D6800BDDCF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		837B97921B8D7D6800BDDCF0 /* Build configuration list for PBXNativeTarget "CALabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837B97931B8D7D6800BDDCF0 /* Debug */,
+				837B97941B8D7D6800BDDCF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		837B97951B8D7D6800BDDCF0 /* Build configuration list for PBXNativeTarget "CALabUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837B97961B8D7D6800BDDCF0 /* Debug */,
+				837B97971B8D7D6800BDDCF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 837B97601B8D7D6800BDDCF0 /* Project object */;
+}
