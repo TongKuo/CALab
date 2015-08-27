@@ -673,9 +673,9 @@
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="EiT-Mj-1SZ" customClass="CustomContentView">
                 <rect key="frame" x="0.0" y="0.0" width="823" height="590"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-of-l3R" customClass="CustomButton">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-of-l3R" customClass="LayerHostingButton">
                         <rect key="frame" x="20" y="529" width="172" height="21"/>
                         <buttonCell key="cell" type="square" title="Stop Explicit Animation" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wdz-bJ-thc">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -684,6 +684,13 @@
                         <connections>
                             <action selector="stopExplicitAnimAction:" target="EiT-Mj-1SZ" id="uzl-UA-Ex2"/>
                         </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jm8-99-U26" customClass="LayerBackedButton">
+                        <rect key="frame" x="225" y="529" width="172" height="21"/>
+                        <buttonCell key="cell" type="square" title="Layer Backed Button" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zn5-Y1-lz7">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
                     </button>
                 </subviews>
                 <animations/>

@@ -1,5 +1,5 @@
 //
-//  CustomButton.h
+//  LayerHostingButton.h
 //  CALab
 //
 //  Created by Tong G. on 8/27/15.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface CustomButton : NSButton
+@interface LayerHostingButton : NSButton
 
 - ( void ) animate;
 

@@ -1,5 +1,5 @@
 //
-//  CustomButton.m
+//  LayerHostingButton.m
 //  CALab
 //
 //  Created by Tong G. on 8/27/15.
@@ -7,9 +7,9 @@
 //
 
 @import QuartzCore;
-#import "CustomButton.h"
+#import "LayerHostingButton.h"
 
-@implementation CustomButton
+@implementation LayerHostingButton
 
 - ( void ) awakeFromNib
     {

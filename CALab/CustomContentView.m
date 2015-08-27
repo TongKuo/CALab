@@ -8,7 +8,7 @@
 
 @import QuartzCore;
 #import "CustomContentView.h"
-#import "CustomButton.h"
+#import "LayerHostingButton.h"
 
 @implementation CustomContentView
 
