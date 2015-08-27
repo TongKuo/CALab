@@ -15,6 +15,7 @@
 		837B97801B8D7D6800BDDCF0 /* CALabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B977F1B8D7D6800BDDCF0 /* CALabTests.m */; };
 		837B978B1B8D7D6800BDDCF0 /* CALabUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B978A1B8D7D6800BDDCF0 /* CALabUITests.m */; };
 		837B979A1B8D7E3F00BDDCF0 /* CustomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B97991B8D7E3F00BDDCF0 /* CustomContentView.m */; };
+		837B979D1B8F05AA00BDDCF0 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B979C1B8F05AA00BDDCF0 /* CustomButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		837B978C1B8D7D6800BDDCF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		837B97981B8D7E3F00BDDCF0 /* CustomContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomContentView.h; sourceTree = "<group>"; };
 		837B97991B8D7E3F00BDDCF0 /* CustomContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomContentView.m; sourceTree = "<group>"; };
+		837B979B1B8F05AA00BDDCF0 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		837B979C1B8F05AA00BDDCF0 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		837B979E1B8F069E00BDDCF0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +111,13 @@
 				837B976C1B8D7D6800BDDCF0 /* AppDelegate.m */,
 				837B97981B8D7E3F00BDDCF0 /* CustomContentView.h */,
 				837B97991B8D7E3F00BDDCF0 /* CustomContentView.m */,
+				837B979B1B8F05AA00BDDCF0 /* CustomButton.h */,
+				837B979C1B8F05AA00BDDCF0 /* CustomButton.m */,
 				837B97711B8D7D6800BDDCF0 /* Assets.xcassets */,
 				837B97731B8D7D6800BDDCF0 /* MainMenu.xib */,
 				837B97761B8D7D6800BDDCF0 /* Info.plist */,
 				837B976E1B8D7D6800BDDCF0 /* Supporting Files */,
+				837B979E1B8F069E00BDDCF0 /* PrefixHeader.pch */,
 			);
 			path = CALab;
 			sourceTree = "<group>";
@@ -270,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837B979D1B8F05AA00BDDCF0 /* CustomButton.m in Sources */,
 				837B97701B8D7D6800BDDCF0 /* main.m in Sources */,
 				837B979A1B8D7E3F00BDDCF0 /* CustomContentView.m in Sources */,
 				837B976D1B8D7D6800BDDCF0 /* AppDelegate.m in Sources */,

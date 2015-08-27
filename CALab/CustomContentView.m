@@ -8,6 +8,7 @@
 
 @import QuartzCore;
 #import "CustomContentView.h"
+#import "CustomButton.h"
 
 @implementation CustomContentView
 
@@ -15,6 +16,8 @@
     {
     for ( CALayer* _Layer in self.layer.sublayers )
         [ _Layer removeAnimationForKey: @"animations" ];
+
+    
     }
 
 - ( void ) awakeFromNib
@@ -22,7 +25,7 @@
     [ self setWantsLayer: YES ];
 
     CALayer* sublayer = [ CALayer layer ];
-    [ sublayer setBounds: NSMakeRect( 80, 80, 50, 60 ) ];
+    [ sublayer setBounds: NSMakeRect( 0, 0, 50, 60 ) ];
     [ sublayer setAnchorPoint: NSMakePoint( 0, 0 ) ];
     [ sublayer setBackgroundColor: [ NSColor orangeColor ].CGColor ];
     [ sublayer setPosition: CGPointMake( 74.f, 74.f ) ];

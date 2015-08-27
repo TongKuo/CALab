@@ -675,7 +675,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="823" height="590"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-of-l3R">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-of-l3R" customClass="CustomButton">
                         <rect key="frame" x="14" y="522" width="184" height="32"/>
                         <buttonCell key="cell" type="push" title="Stop Explicit Animation" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wdz-bJ-thc">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
