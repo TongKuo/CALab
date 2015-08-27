@@ -9,6 +9,11 @@
 #import <Cocoa/Cocoa.h>
 
 @interface LayerHostingButton : NSButton
+    {
+@protected
+    NSColor* _greenColor;
+    NSColor* _orangeColor;
+    }
 
 - ( void ) animate;
 

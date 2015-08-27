@@ -13,6 +13,9 @@
 
 - ( void ) awakeFromNib
     {
+    self->_greenColor = [ NSColor greenColor ];
+    self->_orangeColor = [ NSColor orangeColor ];
+
     CALayer* hostingLayer = [ CALayer layer ];
 
     [ hostingLayer setDelegate: self ];
@@ -33,7 +36,7 @@
 
 - ( void ) drawLayer: ( nonnull CALayer* )_Layer inContext: ( nonnull CGContextRef )_cgCtx
     {
-    NSLog( @"Fuck: %@", NSStringFromPoint( _Layer.position ) );
+    NSLog( @">>> Layer: %@", NSStringFromPoint( _Layer.position ) );
 
     CGContextRef cgContext = _cgCtx;
     CGMutablePathRef cgPath = CGPathCreateMutable();
@@ -58,10 +61,21 @@
     {
     [ self setFrameOrigin: NSMakePoint( 0.f, 10.f ) ];
 
-    CABasicAnimation* basicAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
-    [ basicAnim setDuration: .4f ];
-    [ self.layer addAnimation: basicAnim forKey: @"position" ];
+    CABasicAnimation* posAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
+//    [ posAnim setDuration: .4f ];
+
+    CABasicAnimation* bgColorAnim  = [ CABasicAnimation animationWithKeyPath: @"backgroundColor" ];
+    [ bgColorAnim setFromValue: self->_orangeColor ];
+    [ bgColorAnim setToValue: self->_greenColor ];
+//    [ bgColorAnim setDuration: .4f ];
+
+    CAAnimationGroup* animGroup = [ CAAnimationGroup animation ];
+    [ animGroup setAnimations: @[ posAnim, bgColorAnim ] ];
+    [ animGroup setDuration: .4f ];
+
+    [ self.layer addAnimation: animGroup forKey: @"position" ];
     [ self.layer setPosition: CGPointMake( 0.f, 10.f ) ];
+    [ self.layer setBackgroundColor: self->_greenColor.CGColor ];
     }
 
 @end
