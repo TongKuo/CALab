@@ -31,10 +31,10 @@
 //    NSLog( @"%s", __PRETTY_FUNCTION__ );
 //    }
 
-- ( void ) drawRect: ( NSRect )_DirtyRect
-    {
-    [ super drawRect: _DirtyRect ];
-    NSLog( @"%s", __PRETTY_FUNCTION__ );
-    }
+//- ( void ) drawRect: ( NSRect )_DirtyRect
+//    {
+//    [ super drawRect: _DirtyRect ];
+//    NSLog( @"%s", __PRETTY_FUNCTION__ );
+//    }
 
 @end

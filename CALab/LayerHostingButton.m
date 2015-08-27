@@ -59,8 +59,6 @@
 
 - ( void ) animate
     {
-    [ self setFrameOrigin: NSMakePoint( 0.f, 10.f ) ];
-
     CABasicAnimation* posAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
 //    [ posAnim setDuration: .4f ];
 
@@ -76,6 +74,8 @@
     [ self.layer addAnimation: animGroup forKey: @"position" ];
     [ self.layer setPosition: CGPointMake( 0.f, 10.f ) ];
     [ self.layer setBackgroundColor: self->_greenColor.CGColor ];
+
+    [ self setFrameOrigin: NSMakePoint( 0.f, 10.f ) ];
     }
 
 @end

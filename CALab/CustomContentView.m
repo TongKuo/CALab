@@ -31,6 +31,7 @@
     [ sublayer setPosition: CGPointMake( 74.f, 74.f ) ];
 
     [ sublayer setDelegate: self ];
+    [ sublayer addConstraint: [ CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"superlayer" attribute: kCAConstraintMidX ] ];
     [ self.layer addSublayer: sublayer ];
 
     self->_timer = [ NSTimer timerWithTimeInterval: 1.f
@@ -39,8 +40,41 @@
                                           userInfo: @{ @"sublayer" : sublayer }
                                            repeats: NO ];
 
-//    [ self->_timer fire ];
     [ [ NSRunLoop currentRunLoop ] addTimer: self->_timer forMode: NSDefaultRunLoopMode ];
+
+    [ self _demoLayerConstraints ];
+    }
+
+- ( void ) _demoLayerConstraints
+    {
+    [ self.layer setLayoutManager: [ CAConstraintLayoutManager layoutManager ] ];
+
+    CGColorRef cgBackgroundColor = [ NSColor colorWithSRGBRed: 252.f / 255 green: 216.f / 255 blue: 182.f / 255 alpha: 1.f ].CGColor;
+
+    CALayer* layerA = [ CALayer layer ];
+    layerA.name = @"layer-a";
+    layerA.backgroundColor = cgBackgroundColor;
+    layerA.bounds = CGRectMake( 0, 0, 200.f, 50.f );
+    layerA.borderWidth = 2.f;
+    layerA.masksToBounds = YES;
+
+    [ layerA addConstraint: [ CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"superlayer" attribute: kCAConstraintMidX ] ];
+    [ layerA addConstraint: [ CAConstraint constraintWithAttribute: kCAConstraintMidY relativeTo: @"superlayer" attribute: kCAConstraintMidY ] ];
+
+    CALayer* layerB = [ CALayer layer ];
+    layerB.name = @"layer-b";
+    layerB.backgroundColor = cgBackgroundColor;
+    layerB.borderWidth = 2.f;
+
+    layerB.bounds = CGRectMake( 0.f, 0.f, 200.f, 200.f );
+
+//    [ layerB addConstraint: [ CAConstraint constraintWithAttribute: kCAConstraintMaxY relativeTo: layerA.name attribute: kCAConstraintMinY offset: -10.f ] ];
+//    [ layerB addConstraint: [ CAConstraint constraintWithAttribute: kCAConstraintWidth relativeTo: layerA.name attribute: kCAConstraintWidth ] ];
+//    [ layerB addConstraint: [ CAConstraint constraintWithAttribute: kCAConstraintMinY relativeTo: @"superlayer" attribute: kCAConstraintMinY offset: 10.f ] ];
+//    [ layerB addConstraint: [ CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"superlayer" attribute: kCAConstraintMidX ] ];
+
+    [ self.layer addSublayer: layerA ];
+    [ layerA addSublayer: layerB ];
     }
 
 - ( void ) _timerFireMethod: ( NSTimer* )_Timer
