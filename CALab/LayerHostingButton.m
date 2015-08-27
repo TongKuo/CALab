@@ -24,6 +24,16 @@
     [ hostingLayer setPosition: CGPointMake( NSMinX( self.frame ), NSMinY( self.frame ) ) ];
     [ hostingLayer setBackgroundColor: [ NSColor orangeColor ].CGColor ];
 
+    CABasicAnimation* posAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
+    [ posAnim setDuration: .4f ];
+
+    CABasicAnimation* bgColorAnim  = [ CABasicAnimation animationWithKeyPath: @"backgroundColor" ];
+    [ bgColorAnim setFromValue: self->_orangeColor ];
+    [ bgColorAnim setToValue: self->_greenColor ];
+    [ bgColorAnim setDuration: .4f ];
+
+    [ hostingLayer setActions: @{ @"position" : posAnim, @"backgroundColor" : bgColorAnim } ];
+
     [ self setLayer: hostingLayer ];
     [ self setLayerContentsRedrawPolicy: NSViewLayerContentsRedrawOnSetNeedsDisplay ];
     [ self setWantsLayer: YES ];
@@ -57,25 +67,53 @@
     CFRelease( cgPath );
     }
 
+- ( id <CAAction> ) actionForLayer: ( nonnull CALayer* )_Layer
+                            forKey: ( nonnull NSString* )_Event
+    {
+    CABasicAnimation* anim = nil;
+
+    if ( [ _Event isEqualToString: @"position" ] )
+        {
+        anim = [ CABasicAnimation animationWithKeyPath: @"position" ];
+        [ anim setDuration: 4.f ];
+        }
+
+    else if ( [ _Event isEqualToString: @"backgroundColor" ] )
+        {
+        anim  = [ CABasicAnimation animationWithKeyPath: @"backgroundColor" ];
+        [ anim setFromValue: self->_orangeColor ];
+        [ anim setToValue: self->_greenColor ];
+        [ anim setDuration: 4.f ];
+        }
+
+    return anim;
+    }
+
 - ( void ) animate
     {
-    CABasicAnimation* posAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
-//    [ posAnim setDuration: .4f ];
+//    [ CATransaction begin ];
+//        [ CATransaction setValue: @4.f forKey: kCATransactionAnimationDuration ];
+        self.layer.position = CGPointMake( 0.f, 10.f );
+        self.layer.backgroundColor = self->_greenColor.CGColor;
+//    [ CATransaction commit ];
 
-    CABasicAnimation* bgColorAnim  = [ CABasicAnimation animationWithKeyPath: @"backgroundColor" ];
-    [ bgColorAnim setFromValue: self->_orangeColor ];
-    [ bgColorAnim setToValue: self->_greenColor ];
-//    [ bgColorAnim setDuration: .4f ];
-
-    CAAnimationGroup* animGroup = [ CAAnimationGroup animation ];
-    [ animGroup setAnimations: @[ posAnim, bgColorAnim ] ];
-    [ animGroup setDuration: .4f ];
-
-    [ self.layer addAnimation: animGroup forKey: @"position" ];
-    [ self.layer setPosition: CGPointMake( 0.f, 10.f ) ];
-    [ self.layer setBackgroundColor: self->_greenColor.CGColor ];
-
-    [ self setFrameOrigin: NSMakePoint( 0.f, 10.f ) ];
+//    CABasicAnimation* posAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
+////    [ posAnim setDuration: .4f ];
+//
+//    CABasicAnimation* bgColorAnim  = [ CABasicAnimation animationWithKeyPath: @"backgroundColor" ];
+//    [ bgColorAnim setFromValue: self->_orangeColor ];
+//    [ bgColorAnim setToValue: self->_greenColor ];
+////    [ bgColorAnim setDuration: .4f ];
+//
+//    CAAnimationGroup* animGroup = [ CAAnimationGroup animation ];
+//    [ animGroup setAnimations: @[ posAnim, bgColorAnim ] ];
+//    [ animGroup setDuration: .4f ];
+//
+//    [ self.layer addAnimation: animGroup forKey: @"position" ];
+//    [ self.layer setPosition: CGPointMake( 0.f, 10.f ) ];
+//    [ self.layer setBackgroundColor: self->_greenColor.CGColor ];
+//
+//    [ self setFrameOrigin: NSMakePoint( 0.f, 10.f ) ];
     }
 
 @end

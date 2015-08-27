@@ -56,7 +56,6 @@
     layerA.backgroundColor = cgBackgroundColor;
     layerA.bounds = CGRectMake( 0, 0, 200.f, 50.f );
     layerA.borderWidth = 2.f;
-    layerA.masksToBounds = YES;
 
     [ layerA addConstraint: [ CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"superlayer" attribute: kCAConstraintMidX ] ];
     [ layerA addConstraint: [ CAConstraint constraintWithAttribute: kCAConstraintMidY relativeTo: @"superlayer" attribute: kCAConstraintMidY ] ];
