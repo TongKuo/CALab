@@ -14,4 +14,9 @@
     NSTimer __strong* _timer;
     }
 
+@property ( weak ) IBOutlet NSButton* buttonTop;
+@property ( weak ) IBOutlet NSButton* buttonBottom;
+
+- ( IBAction ) buttonTopClickedAction: ( id )_Sender;
+
 @end

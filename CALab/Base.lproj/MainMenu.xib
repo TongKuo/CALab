@@ -692,8 +692,29 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
+                    <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qi2-VP-nz5">
+                        <rect key="frame" x="468" y="362" width="172" height="133"/>
+                        <buttonCell key="cell" type="square" title="Button Bottom" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="omY-Ll-gu0">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAW-hG-dwO">
+                        <rect key="frame" x="468" y="362" width="172" height="133"/>
+                        <buttonCell key="cell" type="square" title="Button Top" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Day-kv-kbC">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonTopClickedAction:" target="EiT-Mj-1SZ" id="PSf-mE-15X"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <animations/>
+                <connections>
+                    <outlet property="buttonBottom" destination="Qi2-VP-nz5" id="WIx-vX-vJl"/>
+                    <outlet property="buttonTop" destination="bAW-hG-dwO" id="xcS-kN-pla"/>
+                </connections>
             </view>
             <point key="canvasLocation" x="6.5" y="-62"/>
         </window>

@@ -150,11 +150,32 @@
     [ animationGroup setAnimations: @[ keyframeAnim, gradientAnim ] ];
     [ animationGroup setDuration: 6.f ];
     [ sublayer addAnimation: animationGroup forKey: @"animations" ];
-//    [ sublayer addAnimation: keyframeAnim forKey: @"position" ];
-//    [ sublayer addAnimation: gradientAnim forKey: @"backgroundColor" ];
 
     [ sublayer setPosition: CGPointMake( 566.f, 74.f ) ];
     [ sublayer setBackgroundColor: newColor.CGColor ];
+    }
+
+- ( IBAction ) buttonTopClickedAction: ( id )_Sender
+    {
+    CATransition* transitionForTop = [ CATransition animation ];
+    [ transitionForTop setStartProgress: 0.f ];
+    [ transitionForTop setEndProgress: 1.f ];
+    [ transitionForTop setType: kCATransitionReveal ];
+    [ transitionForTop setSubtype: kCATransitionFromTop ];
+    [ transitionForTop setDuration: .5f ];
+
+    CATransition* transitionForBottom = [ CATransition animation ];
+    [ transitionForBottom setStartProgress: 0.f ];
+    [ transitionForBottom setEndProgress: 1.f ];
+    [ transitionForBottom setSubtype: kCATransitionFromRight ];
+    [ transitionForBottom setType: kCATransitionPush ];
+    [ transitionForBottom setDuration: .5f ];
+
+    [ self.buttonTop.layer addAnimation: transitionForTop forKey: @"trasition" ];
+    [ self.buttonBottom.layer addAnimation: transitionForBottom forKey: @"trasition" ];
+
+    self.buttonTop.hidden = YES;
+    self.buttonBottom.hidden = NO;
     }
 
 @end
