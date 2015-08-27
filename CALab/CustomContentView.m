@@ -17,7 +17,7 @@
     for ( CALayer* _Layer in self.layer.sublayers )
         [ _Layer removeAnimationForKey: @"animations" ];
 
-    
+    [ _Sender animate ];
     }
 
 - ( void ) awakeFromNib

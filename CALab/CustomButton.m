@@ -13,48 +13,27 @@
 
 - ( void ) awakeFromNib
     {
-//    [ self setWantsLayer: YES ];
-//    [ self setLayerContentsRedrawPolicy: NSViewLayerContentsRedrawOnSetNeedsDisplay ];
-//
-//    CALayer* hostingLayer = [ CALayer layer ];
-//
-//    [ hostingLayer setDelegate: self ];
-//
-//    [ hostingLayer setBounds: self.bounds ];
-//    [ hostingLayer setAnchorPoint: NSMakePoint( 0.f, 0.f ) ];
-////    [ hostingLayer setBackgroundColor: [ NSColor orangeColor ].CGColor ];
-//    [ hostingLayer setPosition: CGPointMake( 0.f, 0.f ) ];
-//
-//    [ self setLayer: hostingLayer ];
+    CALayer* hostingLayer = [ CALayer layer ];
 
-    NSLog( @"Layer: %@", self.layer );
+    [ hostingLayer setDelegate: self ];
+
+    [ hostingLayer setBounds: self.bounds ];
+    [ hostingLayer setPosition: CGPointMake( NSMinX( self.frame ), NSMinY( self.frame ) ) ];
+    [ hostingLayer setBackgroundColor: [ NSColor orangeColor ].CGColor ];
+
+    [ self setLayer: hostingLayer ];
+    [ self setLayerContentsRedrawPolicy: NSViewLayerContentsRedrawOnSetNeedsDisplay ];
+    [ self setWantsLayer: YES ];
     }
 
-//- ( BOOL ) wantsUpdateLayer
-//    {
-//    return YES;
-//    }
-//
-//- ( void ) updateLayer
-//    {
-//    NSLog( @"%s", __PRETTY_FUNCTION__ );
-//    }
-
-- ( void ) drawRect: ( NSRect )_DirtyRect
+- ( BOOL ) wantsUpdateLayer
     {
-    [ super drawRect: _DirtyRect ];
-
-//    [ [ NSColor orangeColor ] set ];
+    return YES;
     }
-
-//- ( void ) displayLayer: ( nonnull CALayer* )_Layer
-//    {
-//    NSLog( @"%@", _Layer );
-//    }
 
 - ( void ) drawLayer: ( nonnull CALayer* )_Layer inContext: ( nonnull CGContextRef )_cgCtx
     {
-    NSLog( @"Fuck: %@", _Layer );
+    NSLog( @"Fuck: %@", NSStringFromPoint( _Layer.position ) );
 
     CGContextRef cgContext = _cgCtx;
     CGMutablePathRef cgPath = CGPathCreateMutable();
@@ -74,10 +53,15 @@
 
     CFRelease( cgPath );
     }
-//
-//- ( void ) animate
-//    {
-//
-//    }
+
+- ( void ) animate
+    {
+    [ self setFrameOrigin: NSMakePoint( 0.f, 10.f ) ];
+
+    CABasicAnimation* basicAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
+    [ basicAnim setDuration: .4f ];
+    [ self.layer addAnimation: basicAnim forKey: @"position" ];
+    [ self.layer setPosition: CGPointMake( 0.f, 10.f ) ];
+    }
 
 @end
