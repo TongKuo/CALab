@@ -81,7 +81,7 @@
 //    [ CATransaction begin ];
 //        [ CATransaction setValue: @4.f forKey: kCATransactionAnimationDuration ];
     self.layer.position = CGPointMake( 0.f, 10.f );
-    self.layer.backgroundColor = self->_greenColor.CGColor;
+    self.layer.backgroundColor = [ NSColor blueColor ].CGColor;
 //    [ CATransaction commit ];
 
 //    CABasicAnimation* posAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];

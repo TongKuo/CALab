@@ -24,12 +24,11 @@
         [ self setBackgroundColor: [ NSColor orangeColor ].CGColor ];
 
         CABasicAnimation* posAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
-        [ posAnim setDuration: 4.f ];
+        [ posAnim setDuration: 1.f ];
 
         CABasicAnimation* bgColorAnim  = [ CABasicAnimation animationWithKeyPath: @"backgroundColor" ];
-        [ bgColorAnim setFromValue: self->_orangeColor ];
-        [ bgColorAnim setToValue: self->_greenColor ];
-        [ bgColorAnim setDuration: 4.f ];
+        [ bgColorAnim setFromValue: ( __bridge id )( self.backgroundColor ) ];
+        [ bgColorAnim setDuration: 1.f ];
 
         [ self setActions: @{ @"position" : posAnim, @"backgroundColor" : bgColorAnim } ];
         }
