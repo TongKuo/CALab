@@ -17,6 +17,7 @@
 		837B979A1B8D7E3F00BDDCF0 /* CustomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B97991B8D7E3F00BDDCF0 /* CustomContentView.m */; };
 		837B979D1B8F05AA00BDDCF0 /* LayerHostingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B979C1B8F05AA00BDDCF0 /* LayerHostingButton.m */; };
 		837B97A11B8F355100BDDCF0 /* LayerBackedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B97A01B8F355100BDDCF0 /* LayerBackedButton.m */; };
+		837F1B141B906FB10042CA15 /* CustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 837F1B131B906FB10042CA15 /* CustomLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		837B979E1B8F069E00BDDCF0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		837B979F1B8F355100BDDCF0 /* LayerBackedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerBackedButton.h; sourceTree = "<group>"; };
 		837B97A01B8F355100BDDCF0 /* LayerBackedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerBackedButton.m; sourceTree = "<group>"; };
+		837F1B121B906FB10042CA15 /* CustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayer.h; sourceTree = "<group>"; };
+		837F1B131B906FB10042CA15 /* CustomLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				837B97991B8D7E3F00BDDCF0 /* CustomContentView.m */,
 				837B979B1B8F05AA00BDDCF0 /* LayerHostingButton.h */,
 				837B979C1B8F05AA00BDDCF0 /* LayerHostingButton.m */,
+				837F1B121B906FB10042CA15 /* CustomLayer.h */,
+				837F1B131B906FB10042CA15 /* CustomLayer.m */,
 				837B979F1B8F355100BDDCF0 /* LayerBackedButton.h */,
 				837B97A01B8F355100BDDCF0 /* LayerBackedButton.m */,
 				837B97711B8D7D6800BDDCF0 /* Assets.xcassets */,
@@ -284,6 +289,7 @@
 			files = (
 				837B979D1B8F05AA00BDDCF0 /* LayerHostingButton.m in Sources */,
 				837B97701B8D7D6800BDDCF0 /* main.m in Sources */,
+				837F1B141B906FB10042CA15 /* CustomLayer.m in Sources */,
 				837B979A1B8D7E3F00BDDCF0 /* CustomContentView.m in Sources */,
 				837B976D1B8D7D6800BDDCF0 /* AppDelegate.m in Sources */,
 				837B97A11B8F355100BDDCF0 /* LayerBackedButton.m in Sources */,
