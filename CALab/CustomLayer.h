@@ -7,7 +7,14 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+@import Cocoa;
 
 @interface CustomLayer : CALayer
+    {
+@protected
+    NSView __strong* _hostView;
+    }
+
+- ( instancetype ) initWithHostView: ( NSView* )_View;
 
 @end
