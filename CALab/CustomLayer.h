@@ -13,6 +13,9 @@
     {
 @protected
     NSView __strong* _hostView;
+
+    NSColor* _greenColor;
+    NSColor* _orangeColor;
     }
 
 - ( instancetype ) initWithHostView: ( NSView* )_View;

@@ -10,7 +10,7 @@
 
 @interface LayerHostingButton : NSButton
     {
-@protected
+@private
     NSColor* _greenColor;
     NSColor* _orangeColor;
     }

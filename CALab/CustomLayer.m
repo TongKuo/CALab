@@ -13,7 +13,26 @@
 - ( instancetype ) initWithHostView: ( NSView* )_HostView
     {
     if ( self = [ super init ] )
+        {
+        self->_greenColor = [ NSColor greenColor ];
+        self->_orangeColor = [ NSColor orangeColor ];
+
         self->_hostView = _HostView;
+
+        [ self setBounds: self.bounds ];
+        [ self setPosition: CGPointMake( NSMinX( self.frame ), NSMinY( self.frame ) ) ];
+        [ self setBackgroundColor: [ NSColor orangeColor ].CGColor ];
+
+        CABasicAnimation* posAnim = [ CABasicAnimation animationWithKeyPath: @"position" ];
+        [ posAnim setDuration: 4.f ];
+
+        CABasicAnimation* bgColorAnim  = [ CABasicAnimation animationWithKeyPath: @"backgroundColor" ];
+        [ bgColorAnim setFromValue: self->_orangeColor ];
+        [ bgColorAnim setToValue: self->_greenColor ];
+        [ bgColorAnim setDuration: 4.f ];
+
+        [ self setActions: @{ @"position" : posAnim, @"backgroundColor" : bgColorAnim } ];
+        }
 
     return self;
     }
