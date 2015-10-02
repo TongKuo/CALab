@@ -16,6 +16,7 @@
 
 @property ( weak ) IBOutlet NSButton* buttonTop;
 @property ( weak ) IBOutlet NSButton* buttonBottom;
+@property ( weak ) IBOutlet NSSearchField* searchField;
 
 - ( IBAction ) buttonTopClickedAction: ( id )_Sender;
 

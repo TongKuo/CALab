@@ -43,7 +43,7 @@
     CGContextRef cgContext = _cgCtx;
     CGMutablePathRef cgPath = CGPathCreateMutable();
 
-    CGPathAddRect( cgPath, NULL, CGRectMake( NSMinX( self.bounds ), NSMinY( self.bounds ), NSWidth( self.bounds ), NSHeight( self.bounds ) ) );
+    CGPathAddRect( cgPath, NULL, self.bounds );
     CGContextAddPath( cgContext, cgPath );
     CGContextSetLineWidth( cgContext, 1.f );
 

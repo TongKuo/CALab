@@ -163,15 +163,15 @@
     [ transitionForTop setSubtype: kCATransitionFromTop ];
     [ transitionForTop setDuration: .5f ];
 
-    CATransition* transitionForBottom = [ CATransition animation ];
-    [ transitionForBottom setStartProgress: 0.f ];
-    [ transitionForBottom setEndProgress: 1.f ];
-    [ transitionForBottom setSubtype: kCATransitionFromRight ];
-    [ transitionForBottom setType: kCATransitionPush ];
-    [ transitionForBottom setDuration: .5f ];
+//    CATransition* transitionForBottom = [ CATransition animation ];
+//    [ transitionForBottom setStartProgress: 0.f ];
+//    [ transitionForBottom setEndProgress: 1.f ];
+//    [ transitionForBottom setSubtype: kCATransitionFromRight ];
+//    [ transitionForBottom setType: kCATransitionPush ];
+//    [ transitionForBottom setDuration: .5f ];
 
     [ self.buttonTop.layer addAnimation: transitionForTop forKey: @"trasition" ];
-    [ self.buttonBottom.layer addAnimation: transitionForBottom forKey: @"trasition" ];
+    [ self.buttonBottom.layer addAnimation: transitionForTop forKey: @"trasition" ];
 
     self.buttonTop.hidden = YES;
     self.buttonBottom.hidden = NO;

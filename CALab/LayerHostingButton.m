@@ -19,7 +19,7 @@
 
     CustomLayer* hostingLayer = [ [ CustomLayer alloc ] initWithHostView: self ];
 
-//    [ hostingLayer setDelegate: self ];
+    [ hostingLayer setDelegate: self ];
 
     [ self setLayer: hostingLayer ];
     [ self setLayerContentsRedrawPolicy: NSViewLayerContentsRedrawOnSetNeedsDisplay ];
@@ -31,28 +31,28 @@
     return YES;
     }
 
-//- ( void ) drawLayer: ( nonnull CALayer* )_Layer inContext: ( nonnull CGContextRef )_cgCtx
-//    {
-//    NSLog( @">>> Layer: %@", NSStringFromPoint( _Layer.position ) );
-//
-//    CGContextRef cgContext = _cgCtx;
-//    CGMutablePathRef cgPath = CGPathCreateMutable();
-//
-//    CGPathAddRect( cgPath, NULL, CGRectMake( NSMinX( self.bounds ), NSMinY( self.bounds ), NSWidth( self.bounds ), NSHeight( self.bounds ) ) );
-//    CGContextAddPath( cgContext, cgPath );
-//    CGContextSetLineWidth( cgContext, 1.f );
-//
-//    if ( self.cell.isHighlighted )
-//        {
-//        CGColorRef cgColor = CGColorCreateGenericRGB( 1.f, 1.f, 1.f, 1.f );
-//        CGContextSetStrokeColorWithColor( cgContext, cgColor );
-//        CFRelease( cgColor );
-//        }
-//
-//    CGContextStrokePath( cgContext );
-//
-//    CFRelease( cgPath );
-//    }
+- ( void ) drawLayer: ( nonnull CALayer* )_Layer inContext: ( nonnull CGContextRef )_cgCtx
+    {
+    NSLog( @">>> Layer: %@", NSStringFromPoint( _Layer.position ) );
+
+    CGContextRef cgContext = _cgCtx;
+    CGMutablePathRef cgPath = CGPathCreateMutable();
+
+    CGPathAddRect( cgPath, NULL, CGRectMake( NSMinX( self.bounds ), NSMinY( self.bounds ), NSWidth( self.bounds ), NSHeight( self.bounds ) ) );
+    CGContextAddPath( cgContext, cgPath );
+    CGContextSetLineWidth( cgContext, 1.f );
+
+    if ( self.cell.isHighlighted )
+        {
+        CGColorRef cgColor = CGColorCreateGenericRGB( 1.f, 1.f, 1.f, 1.f );
+        CGContextSetStrokeColorWithColor( cgContext, cgColor );
+        CFRelease( cgColor );
+        }
+
+    CGContextStrokePath( cgContext );
+
+    CFRelease( cgPath );
+    }
 
 //- ( id <CAAction> ) actionForLayer: ( nonnull CALayer* )_Layer
 //                            forKey: ( nonnull NSString* )_Event
